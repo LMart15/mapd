@@ -4,15 +4,16 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { CoursesPage } from '../pages/courses/courses';
 import { CourseDetailsPage } from "../pages/course-details/course-details";
 import { ProfessorsPage } from '../pages/professors/professors';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { AngularFireModule } from 'angularfire2'; 
+
 
 // Initialize Firebase
   export const firebaseConfig = {
@@ -33,7 +34,6 @@ import { AngularFireModule } from 'angularfire2';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     CoursesPage,
     CourseDetailsPage,
     ProfessorsPage
@@ -41,7 +41,6 @@ import { AngularFireModule } from 'angularfire2';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     CoursesPage,
     CourseDetailsPage,
     ProfessorsPage
@@ -49,6 +48,7 @@ import { AngularFireModule } from 'angularfire2';
   providers: [
     StatusBar,
     SplashScreen,
+    SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
    bootstrap: [IonicApp]

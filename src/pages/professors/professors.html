@@ -9,7 +9,7 @@
 
 <ion-content padding>
 
-  <ion-card  *ngFor="let prof of professors | async" padding> 
+  <ion-card  *ngFor="let prof of professors | async" (click)="onEmailProf(prof.email)" padding> 
       <button ion-item>
         <h1>{{prof.name}}</h1>
         <p>{{prof.email}}</p>
