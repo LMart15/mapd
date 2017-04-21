@@ -7,7 +7,24 @@
   </ion-navbar>
 </ion-header>
 
-
-<ion-content padding>
-
+  <ion-content>
+  <ion-item-group>
+    <ion-item-divider color="light">Semester 1</ion-item-divider>
+    <button ion-item *ngFor="let course1 of semCourses1 | async" (click)="onCourseClick(course1.$key, '1')">
+      {{course1.code}}
+      <div class="item-note" item-right>
+        {{course1.title}}
+      </div>
+    </button>
+  </ion-item-group>
+  <ion-item-group>
+    <ion-item-divider color="light">Semester 2</ion-item-divider>
+    <button ion-item *ngFor="let course2 of semCourses2 | async" (click)="onCourseClick(course2.$key, '2')">
+      {{course2.code}}
+      <div class="item-note" item-right>
+        {{course2.title}}
+      </div>
+    </button>
+  </ion-item-group>
 </ion-content>
+

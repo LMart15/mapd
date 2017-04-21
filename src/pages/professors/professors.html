@@ -7,7 +7,13 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
+
+  <ion-card  *ngFor="let prof of professors | async" padding> 
+      <button ion-item>
+        <h1>{{prof.name}}</h1>
+        <p>{{prof.email}}</p>
+      </button>
+  </ion-card>
 
 </ion-content>

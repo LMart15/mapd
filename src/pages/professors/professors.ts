@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 
 @Component({
@@ -8,7 +9,11 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ProfessorsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  professors: FirebaseListObservable<any>;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, af: AngularFire) {
+
+    this.professors = af.database.list('/professors');
   }
 
   ionViewDidLoad() {

@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { CoursesPage } from '../pages/courses/courses';
+import { CourseDetailsPage } from "../pages/course-details/course-details"
 import { ProfessorsPage } from '../pages/professors/professors';
 
 @Component({
