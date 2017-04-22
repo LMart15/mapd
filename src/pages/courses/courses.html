@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="course">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -9,20 +9,20 @@
 
   <ion-content>
   <ion-item-group>
-    <ion-item-divider color="light">Semester 1</ion-item-divider>
+    <ion-item-divider color="lighttorq">Semester 1</ion-item-divider>
     <button ion-item *ngFor="let course1 of semCourses1 | async" (click)="onCourseClick(course1.$key, '1')">
-      {{course1.code}}
+      <p class="course_code">{{course1.code}}</p>
       <div class="item-note" item-right>
-        {{course1.title}}
+        <p class="course_title">{{course1.title}}</p>
       </div>
     </button>
   </ion-item-group>
   <ion-item-group>
-    <ion-item-divider color="light">Semester 2</ion-item-divider>
+    <ion-item-divider color="lighttorq">Semester 2</ion-item-divider>
     <button ion-item *ngFor="let course2 of semCourses2 | async" (click)="onCourseClick(course2.$key, '2')">
-      {{course2.code}}
+        <p class="course_code">{{course2.code}}</p>
       <div class="item-note" item-right>
-        {{course2.title}}
+        <p class="course_title">{{course2.title}}</p>
       </div>
     </button>
   </ion-item-group>

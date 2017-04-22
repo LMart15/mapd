@@ -28,7 +28,11 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  centennial: #c0ca33,
+  course:     #0097a7,
+  lighttorq:  #00acc1,
+  coursedit:  #78909c
 );
 
 
@@ -61,6 +65,11 @@ $colors: (
 // default are overridden.
 
 @import "ionic.theme.default";
+
+$card-ios-background-color: #c8e6c9;
+$card-md-background-color: #0097a7;
+$card-wp-background-color: #1a237e;
+
 
 
 // Ionicons
