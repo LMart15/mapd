@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { CoursesPage } from '../pages/courses/courses';
 import { CourseDetailsPage } from "../pages/course-details/course-details";
 import { ProfessorsPage } from '../pages/professors/professors';
+import { CommentsPage } from '../pages/comments/comments';
+import { CommentDetailsPage } from '../pages/comment-details/comment-details';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -36,14 +38,18 @@ import { AngularFireModule } from 'angularfire2';
     HomePage,
     CoursesPage,
     CourseDetailsPage,
-    ProfessorsPage
+    ProfessorsPage,
+    CommentsPage,
+    CommentDetailsPage
   ],
   entryComponents: [
     MyApp,
     HomePage,
     CoursesPage,
     CourseDetailsPage,
-    ProfessorsPage
+    ProfessorsPage,
+    CommentsPage,
+    CommentDetailsPage
   ],
   providers: [
     StatusBar,

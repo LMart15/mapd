@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Feedback</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="ioncontent">
+
+<ion-card  *ngFor="let comment of comments | async" (press)="onCommentPress(comment.$key)"> 
+    <button ion-item>
+      <h2>{{comment.name}}</h2>
+        <ion-note>{{comment.comment}}</ion-note>
+        <ion-icon name="trash" (click)="onTrashClick(comment.$key)" item-right small></ion-icon>
+    </button>
+</ion-card>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="onAddClick()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
